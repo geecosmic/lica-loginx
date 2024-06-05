@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+
+    <title>ADD MEMBER</title>
+
+
+  <style>
+  body {
+ /* overflow-x: hidden;  */
+ background-color: #000;
+  color: white;
+}
+
+.form-control{
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.inpp,label{
+font-size: 12px;
+}
+.inpb{
+  margin-top: 20px;
+text-align: center;
+font-size: 16px;
+width: 300px;
+height: 40px;
+font-weight: 900;
+border-radius: 23px;
+background-color: rgb(16, 152, 50);
+color: #f5eded;
+}
+.inpb:hover{
+color: #f5f50a;
+background-color: rgb(232, 94, 82);
+}
+
+
+.bub{
+  /* text-align: center; */
+  width: 70px;
+border-radius: 23px;
+}
+
+.bstb{
+  width: 100px;
+  background-color: cadetblue;
+
+}
+.bstb:active{
+background-color: #f5f50a;
+}
+
+</style>
+
+</head>
+ 
+<body>
+  <h2 class="text-center mt-3 pb-4">ADD MEMBER</h2>
+  <div class="container mb-3"> 
+  <div class="row"> 
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form id="form">
+      <div class="form-group">
+      <label for="name">KEY NUMBER:</label>
+      <input class="form-control conx" type="text" id="keynumber" name="KEY NO." >
+      </div>
+      
+      <label for="name">NAME:</label>
+      <input class="form-control conx" type="text" id="name" name="NAME" required>
+
+      <label for="degreeStatus">DEGREE:</label>
+      <input class="form-control conx" type="text" id="DEGREE" name="DEGREE">
+      
+      <label for="degreeStatus">STATUS:</label>
+      <input class="form-control conx" type="text" id="STATUS" name="STATUS">
+
+      <label for="phone">PHONE:</label>
+      <input class="form-control" type="tel" id="PHONE" name="PHONE">
+
+      <label for="address">ADDRESS:</label>
+      <textarea class="form-control"  type="text" id="ADDRESS" name="ADDRESS"></textarea>
+
+      <label for="office">OFFICE:</label>
+      <input class="form-control" type="text" id="OFFICE" name="OFFICE">
+
+      <label for="TAC">TAC:</label>
+      <input class="form-control" type="text" id="TAC" name="TAC">
+
+      <label for="HM">HM:</label>
+      <input class="form-control" type="text" id="HM" name="HM">
+      
+    
+    <div style="text-align: center;">
+      <button class="inpb" type="submit" id="submit">SUBMIT</button>
+    </div>
+    </form>
+  </div>
+  </div>
+  <div class="col-md-3"></div>
+   
+    <!-- <div class="container"> -->
+      <div class="row text-center mt-4 buttz">
+        <div class="col-md-4">
+          <button class="bstb">
+            <a style="color: white;text-decoration: none;font-weight: 500;" href="./index1.html">HOME</a>
+            </button>
+        </div>
+        <div class="col-md-4">
+          <button class="bstb">
+            <a style="color: white;text-decoration: none;font-weight: 500;" href="./count2.html">VIEW</a>
+            </button>
+        </div>
+        <div class="col-md-4">
+          <button class="bstb">
+            <a style="color: white;text-decoration: none;font-weight: 500;" href="./index3.html">EDIT</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div> 
+      
+ 
+
+<script src="js/index2.js"></script>
+
+<script>
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbx4_2phk4fKgGnv4KtZ9Btc7pTthgfztGPzmFW5YC-sHolzF95pe4FhM5Tw5f3zML-Y/exec'
+    
+    // // const scriptURL = 'https://script.google.com/macros/s/AKfycbz3lwRqYC0xXGtVwCaQxzSQWGEKctrbhLheEtVVytzmzqaK0_Fh_5fEYoC9bokDc6zH/exec'
+   
+    // const form = document.querySelector('#form')
+    // const btn = document.querySelector('#submit')
+
+    // form.addEventListener('submit', e => {
+    //         e.preventDefault();
+    //         btn.disabled = true;
+    //         btn.innerHTML = "Loading...";
+
+    //         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    //             .then(response => response.json())
+    //             .then(data => {
+    //                 btn.disabled = false;
+    //                 btn.innerHTML = "SUBMIT";
+    //                 if (data.result === 'success') {
+    //                     alert('MEMBER SUCCESSFULLY ADDED!');
+    //                     form.reset();
+    //                 } else if (data.result === 'error' && data.error === 'Duplicate key number') {
+    //                     alert('ERROR: Duplicate key number!');
+    //                     form.reset();
+    //                 } else {
+    //                     alert('Submission failed: ' + data.error);
+    //                     form.reset();
+    //                 }
+    //             })
+    //             .catch(error => {
+    //                 btn.disabled = false;
+    //                 btn.innerHTML = "SUBMIT";
+    //                 alert('Error: ' + error.message);
+    //             });
+    //     });
+  </script>
+
+</body>
+</html>

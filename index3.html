@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    
+    <title>Edit LICA Member</title>
+<style>
+body{
+    background-color: black;
+    color: white;
+    /* overflow-x: hidden; */
+}
+.form-control{
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+h2{
+    color: chocolate;
+}
+.bstt {
+    margin-bottom: 10px;
+    /* margin-top: 25px; */
+    color: #f1eaea;
+                
+}
+.bstb {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: cadetblue;
+}
+.tabb2{
+margin-top: 50px;
+/* position: absolute; */
+color: #f1f1f1;
+width: 100%;
+padding-bottom: 140px;
+margin-bottom: 149px;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container mt-3 mb-3">
+        <div class="text-center">
+            <h2>EDIT MEMBER</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-6">
+                <form id="fetchForm" class="mb-5">
+                    <div style="text-align: center;" class="form-group">
+                        <label for="keyNumber">KEY NUMBER</label>
+                        <input style="text-align: center;" type="text" class="form-control" id="keyNumber" name="keyNumber" required>
+                        <button style="font-weight: 800;border-radius: 14px;width: 100px;margin-top: 10px;" type="submit" class="btn btn-primary">SEARCH</button>
+                    </div>
+                    <!-- <button style="font-weight: 700;border-radius: 23px;width: 80px;" type="submit" class="btn btn-primary">Search</button> -->
+                </form>
+        
+                <form style="margin-bottom: 10px;" id="editForm">
+                    <div class="form-group">
+                        <label for="editKeyNumber">KEY NUMBER</label>
+                        <input type="text" class="form-control" id="editKeyNumber" name="keyNumber" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="editName">NAME</label>
+                        <input type="text" class="form-control" id="editName" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="editDegree">DEGREE</label>
+                        <input type="text" class="form-control" id="editDegree" name="degree">
+                    </div>
+                    <div class="form-group">
+                        <label for="editStatus">STATUS</label>
+                        <input type="text" class="form-control" id="editStatus" name="status">
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone">PHONE</label>
+                        <input type="text" class="form-control" id="editPhone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="editAddress">ADDRESS</label>
+                        <textarea type="text" class="form-control" id="editAddress" name="address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="editOffice">OFFICE</label>
+                        <input type="text" class="form-control" id="editOffice" name="office">
+                    </div>
+                    <div class="form-group">
+                        <label for="editTAC">TAC</label>
+                        <input type="text" class="form-control" id="editTAC" name="tac">
+                    </div>
+                    <div class="form-group">
+                        <label for="editHM">HM</label>
+                        <input type="text" class="form-control" id="editHM" name="hm">
+                    </div>
+                    <button style="font-weight: 600;" type="submit" class="form-control btn btn-success">UPDATE</button>
+                </form>
+        </div>
+        </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <button class="bstb">
+                        <a style="color: white;text-decoration: none;font-weight: 500;" href="./index1.html">HOME</a>
+                        </button>
+                </div>
+                <div class="col-md-4">
+                    <button class="bstb">
+                        <a style="color: white;text-decoration: none;font-weight: 500;" href="./count2.html">VIEW</a>
+                        </button>
+                </div>
+                <div class="col-md-4">
+                    <button class="bstb">
+                        <a style="color: white;text-decoration: none;font-weight: 500;" href="./index2.html">ADD</a>
+                    </button>
+                </div>
+                
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        
+        
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<script src="js/index3.js"></script>
+    <!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzwN-9yX5pburAn-YyNd1TLQgqkLpBmz6U6vUDv0pnbl7q4RsuW1Tn9VXs4jpXFuvrW/exec';
+
+        document.getElementById('fetchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const keyNumber = document.getElementById('keyNumber').value;
+            // const form = document.querySelector('#editForm');
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new URLSearchParams({ action: 'fetchUserData', keyNumber: keyNumber })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    const user = data.user;
+                    document.getElementById('editKeyNumber').value = user.keyNumber;
+                    document.getElementById('editName').value = user.name;
+                    document.getElementById('editDegree').value = user.degree;
+                    document.getElementById('editStatus').value = user.status;
+                    document.getElementById('editPhone').value = user.phone;
+                    document.getElementById('editAddress').value = user.address;
+                    document.getElementById('editOffice').value = user.office;
+                    document.getElementById('editTAC').value = user.tac;
+                    document.getElementById('editHM').value = user.hm;
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => alert('Error: ' + error.message));
+        });
+
+        document.getElementById('editForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(document.getElementById('editForm'));
+            formData.append('action', 'updateUserData');
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    alert('Member updated successfully!');
+                    document.getElementById('editForm').reset();
+                    document.getElementById('fetchForm').reset();
+                } else {
+                    alert(data.error);
+                }
+                // form.reset();
+            })
+            .catch(error => alert('Error: ' + error.message));
+        });
+    </script> -->
+</body>
+</html>
+<!--  -->

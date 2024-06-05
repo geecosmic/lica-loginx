@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>LICA ATTENDANCE</title>
+    <style>
+        body {
+            font-family: "Roboto";
+            background-color: #180f0f;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+        .form-container {
+            background: #350258;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            
+        }
+        .counts {
+            margin-bottom: 40px;
+            text-align: center,right;
+            color: #ccee0b;
+        }
+        .count {
+            margin-bottom: 10px;
+            /* color: #d1e70a; */
+            color: #f8f9f2;
+            font-size: 21px;
+        }
+        .bstt {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    color: #f1eaea;
+    /* padding-bottom: 55px; */
+
+                
+}
+.bstb {
+    width: 70px;
+    border-radius: 23px;
+}
+.bstb {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+.tp{
+padding-top: 40px;
+text-align: center; 
+margin-bottom: 40px; 
+font-size:23px;
+letter-spacing: 5px;
+
+}
+</style>
+</head>
+<body>
+    
+    <div style="text-align: center;" class="container">
+    
+
+        <div class="tp">
+            <h3 style="color: rgb(226, 236, 215);">LAGOS ISLAND CHAPTER(LICA)</h3>
+            <h3 style="color: chartreuse;">ATTENDANCE STATS</h3>
+            <p style="color: #f90505;font-weight: 700;" id="dattte">date</p>
+
+        </div>
+
+        <div class="form-container">
+            <div id="categoryForm" class="counts">
+                <div id="count-fr" class="count">Fr.:  0</div>
+                <div id="count-sor" class="count">Sr.: 0</div>
+                <div id="count-jr" class="count">Jr.:  0</div>
+                <div id="count-colombe" class="count">Colombe:  0</div>
+                <div id="count-RM" class="count">RM:  0</div>
+                <div id="count-GC" class="count">GC:  0</div>
+                <div id="count-Non-Members" class="count">Non Members: 0</div>
+                <div id="count-Total-Attendance" class="count">Total Attendance: 0</div>
+            </div>
+        </div>
+    
+            <table class="tabb3">
+                <tr>
+                <th>
+                    <button class="bstb">
+                    <a style="color: white;text-decoration: none;font-weight: 500;" href="./index1.html">HOME</a>
+                    </button>
+                </th>
+                <th>
+                    <button class="bstb">
+                    <a style="color: white;text-decoration: none;font-weight: 500;" href="./copy_delete.html">CLEAR</a>
+                    </button>
+                </th>
+                <th>
+                    <button class="bstb">
+                    <a style="color: white;text-decoration: none;font-weight: 500;" href="./index2.html">ADD</a>
+                </button>
+                </th>
+                </tr>
+        
+            </table>
+        </div>
+
+
+        <script src="js/count2.js"></script>
+    <script>
+    //     const scriptURL = 'https://script.google.com/macros/s/AKfycbyKKf8AbbQbtMUNu92LIiYLR_QhKYguNM2bqg8d6xnCW_QVZrv6EG2iNeDlzxY4J1lM/exec'; // Replace with your Apps Script URL
+
+    //     function fetchCounts() {
+    //         fetch(`${scriptURL}?action=count`)
+    //             .then(response => response.json())
+    //             .then(data => {
+    //                 document.getElementById('count-fr').textContent = `FRATERS :   ${data['Fr.'] || 0}`;
+    //                 document.getElementById('count-sor').textContent = `S0RORS:   ${data['Sr.'] || 0}`;
+    //                 document.getElementById('count-jr').textContent = `JUNIOR ORDER:   ${data['Jr.'] || 0}`;
+    //                 document.getElementById('count-colombe').textContent = `COLOMBES:   ${data['Colombe'] || 0}`;
+    //                 document.getElementById('count-RM').textContent = `REGIONAL MONITORS:   ${data['RM'] || 0}`;
+    //                 document.getElementById('count-GC').textContent = `GRAND COUNSELLORS:   ${data['GC'] || 0}`;
+    //                 document.getElementById('count-Non-Members').textContent = `NON MEMBERS:   ${data['Non Members'] || 0}`;
+    //                 document.getElementById('count-Total-Attendance').textContent = `TOTAL  ATTENDANCE:   ${data['Total Attendance'] || 0}`;
+    //             })
+    //             .catch(error => alert('Error fetching counts: ' + error.message));
+    //     }
+
+    //     document.addEventListener('DOMContentLoaded', fetchCounts);
+
+
+    // var date = new Date();
+    // // var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    // var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+
+    // var formattedDate = date.toLocaleDateString('en-NG', options);
+    // document.getElementById("dattte").innerHTML = formattedDate;
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+<!-- <div id="count-fr" class="count">Fr.:  0</div>
+<div id="count-sor" class="count">Sr.: 0</div>
+<div id="count-jr" class="count">Jr.:  0</div>
+<div id="count-colombe" class="count">Colombe:  0</div>
+<div id="count-RM" class="count">RM:  0</div>
+<div id="count-GC" class="count">GC:  0</div>
+<div id="count-Non-Members" class="count">Non Members: 0</div>
+<div id="count-Total-Attendance" class="count">Total Attendance: 0</div> -->
+
+
+<!-- document.getElementById('count-fr').textContent = `Fr.: ${data['Fr.'] || 0}`;
+document.getElementById('count-sor').textContent = `Sr.: ${data['Sr.'] || 0}`;
+document.getElementById('count-jr').textContent = `Jr: ${data['Jr.'] || 0}`;
+document.getElementById('count-colombe').textContent = `Colombe: ${data['Colombe'] || 0}`;
+document.getElementById('count-RM').textContent = `RM: ${data['RM'] || 0}`;
+document.getElementById('count-GC').textContent = `GC: ${data['GC'] || 0}`;
+document.getElementById('count-Non-Members').textContent = `Non Members: ${data['Non Members'] || 0}`;
+document.getElementById('count-Total-Attendance').textContent = `Total Attendance: ${data['Total Attendance'] || 0}`; -->
